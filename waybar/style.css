@@ -87,10 +87,14 @@ button:hover {
 #mode,
 #idle_inhibitor,
 #scratchpad,
+#keyboard-state,
+#keyboard-state > label,
+#keyboard-state > label.locked,
+#language,
 #mpd {
     padding: 0 10px;
     color: #ffffff;
-    border-radius: 15px;
+    border-radius: 12px;
 }
 
 #window,
@@ -109,19 +113,16 @@ button:hover {
 }
 
 #clock {
-    border-radius: 15px;
     background-color: #64727D;
 }
 
 #battery {
     background-color: #ffffff;
-    border-radius: 15px;
     color: #000000;
 }
 
 #battery.charging, #battery.plugged {
     color: #ffffff;
-    border-radius: 15px;
     background-color: #26A65B;
 }
 
@@ -134,7 +135,6 @@ button:hover {
 
 #battery.critical:not(.charging) {
     background-color: #f53c3c;
-    border-radius: 15px;
     color: #ffffff;
     animation-name: blink;
     animation-duration: 0.5s;
@@ -149,56 +149,46 @@ label:focus {
 
 #cpu {
     background-color: #2ecc71;
-    border-radius: 15px;
     color: #000000;
 }
 
 #memory {
     background-color: #9b59b6;
-    border-radius: 15px;
 }
 
 #disk {
     background-color: #964B00;
-    border-radius: 15px;
 }
 
 #backlight {
     background-color: #90b1b1;
-    border-radius: 15px;
 }
 
 #network {
     background-color: #2980b9;
-    border-radius: 15px;
 }
 
 #network.disconnected {
     background-color: #f53c3c;
-    border-radius: 15px;
 }
 
 #pulseaudio {
     background-color: #f1c40f;
-    border-radius: 15px;
     color: #000000;
 }
 
 #pulseaudio.muted {
     background-color: #90b1b1;
-    border-radius: 15px;
     color: #2a5c45;
 }
 
 #wireplumber {
     background-color: #fff0f5;
-    border-radius: 15px;
     color: #000000;
 }
 
 #wireplumber.muted {
     background-color: #f53c3c;
-    border-radius: 15px;
 }
 
 #custom-media {
@@ -217,27 +207,22 @@ label:focus {
 
 #temperature {
     background-color: #f0932b;
-    border-radius: 15px;
 }
 
 #temperature.critical {
     background-color: #eb4d4b;
-    border-radius: 15px;
 }
 
 #tray {
-    border-radius: 15px;
     background-color: #2980b9;
 }
 
 #tray > .passive {
-    border-radius: 15px;
     -gtk-icon-effect: dim;
 }
 
 #tray > .needs-attention {
     -gtk-icon-effect: highlight;
-    border-radius: 15px;
     background-color: #eb4d4b;
 }
 
@@ -252,29 +237,24 @@ label:focus {
 
 #mpd {
     background-color: #66cc99;
-    border-radius: 15px;
     color: #2a5c45;
 }
 
 #mpd.disconnected {
     background-color: #f53c3c;
-    border-radius: 15px;
 }
 
 #mpd.stopped {
     background-color: #90b1b1;
-    border-radius: 15px;
 }
 
 #mpd.paused {
     background-color: #51a37a;
-    border-radius: 15px;
 }
 
 #language {
     background: #00b093;
     color: #740864;
-    border-radius: 15px;
     padding: 0 0px;
     margin: 0 0px;
     min-width: 30px;
@@ -286,16 +266,15 @@ label:focus {
     padding: 0 0px;
     margin: 0 0px;
     min-width: 30px;
-    border-radius: 15px;
 }
 
 #keyboard-state > label {
-    padding: 0 5px;
+    color: #000000;
 }
 
 #keyboard-state > label.locked {
-    border-radius: 15px;
     background: #97e1ad;
+    color: #000000;
 }
 
 #scratchpad {
@@ -303,5 +282,5 @@ label:focus {
 }
 
 #scratchpad.empty {
-	background-color: transparent;
+    background-color: transparent;
 }
