@@ -5,9 +5,9 @@
     // "width": 1280, // Waybar width
     "spacing": 4, // Gaps between modules (4px)
     // Choose the order of the modules
-    "modules-left": ["hyprland/workspaces", "sway/mode", "sway/scratchpad", "custom/media"],
-    "modules-center": ["sway/window"],
-    "modules-right": ["mpd", "idle_inhibitor", "pulseaudio", "network", "cpu", "memory", "temperature", "backlight", "keyboard-state", "sway/language", "battery", "battery#bat2", "clock", "tray"],
+    "modules-left": ["hyprland/workspaces", "custom/media"],
+    "modules-center": ["network", "cpu", "memory", "clock", "temperature", "battery", "pulseaudio"],
+    "modules-right": ["keyboard-state", "hyprland/language", "tray"],
     // Modules configuration
     // "hyprland/workspaces": {
     //     "disable-scroll": true,
@@ -30,6 +30,13 @@
     //	"on-scroll-up": "hyprctl dispatch workspace e+1",
     // 	"on-scroll-down": "hyprctl dispatch workspace e-1"
     // },
+    "hyprland/language": {
+	"format": "{}",
+	"format-en": "us",
+	"format-ru": "ru",
+	"format-by": "by",
+	"keyboard-name": "at-translated-set-2-keyboard"
+    },
     "keyboard-state": {
         "numlock": true,
         "capslock": false,
@@ -156,7 +163,8 @@
             "car": "",
             "default": ["", "", ""]
         },
-        "on-click": "pavucontrol"
+        "on-click": "pavucontrol",
+	"on-click-middle": "pactl set-sink-mute 0 toggle"
     },
     "custom/media": {
         "format": "{icon} {}",
