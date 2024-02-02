@@ -100,6 +100,7 @@
         "tooltip-format": "<big>{:%d %B %Y}</big>\n<tt><small>{calendar}</small></tt>",
         "format-alt": "{:%d.%m.%Y}",
 	"format": "{:%H:%M:%S}",
+	"on-click-right": "konsole -e calcurse",
 	"interval": 1
     },
     "cpu": {
