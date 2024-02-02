@@ -35,7 +35,9 @@
 	"format-en": "us",
 	"format-ru": "ru",
 	"format-by": "by",
-	"keyboard-name": "at-translated-set-2-keyboard"
+	"keyboard-name": "at-translated-set-2-keyboard",
+	"on-click": "hyprctl switchxkblayout at-translated-set-2-keyboard next",
+	"on-click-right": "hyprctl switchxkblayout at-translated-set-2-keyboard prev"
     },
     "keyboard-state": {
         "numlock": true,
