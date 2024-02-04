@@ -168,7 +168,7 @@
             "car": "",
             "default": ["", "", ""]
         },
-        "on-click": "pavucontrol",
+        "on-click": "pkill pavucontrol || pavucontrol",
 	"on-click-middle": "pactl set-sink-mute 0 toggle"
     },
     "custom/media": {
