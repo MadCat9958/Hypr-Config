@@ -94,7 +94,7 @@ button:hover {
 #mpd {
     padding: 0 10px;
     color: #ffffff;
-    border-radius: 12px;
+    border-radius: 10px;
 }
 
 #window,
@@ -131,6 +131,16 @@ button:hover {
         background-color: #ffffff;
         color: #000000;
     }
+}
+
+#battery.warning:not(.charging) {
+    background-color: #ffd54d;
+    color: #ffffff;
+    animation-name: blink;
+    animation-duration: 2s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
 }
 
 #battery.critical:not(.charging) {
@@ -175,11 +185,13 @@ label:focus {
 #pulseaudio {
     background-color: #f1c40f;
     color: #000000;
+    /*min-width: 30px;*/
 }
 
 #pulseaudio.muted {
     background-color: #90b1b1;
     color: #2a5c45;
+    /*min-width: 30px;*/
 }
 
 #wireplumber {
