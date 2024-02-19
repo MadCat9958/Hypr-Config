@@ -1,4 +1,5 @@
-{
+[{
+    "name": "botto,",
     "layer": "top", // Waybar at top layer
     "position": "bottom", // Waybar position (top|bottom|left|right)
     "height": 30, // Waybar height (to be removed for auto height)
@@ -6,21 +7,21 @@
     "spacing": 2, // Gaps between modules (4px)
     // Choose the order of the modules
     "modules-left": ["hyprland/workspaces", "custom/media"],
-    "modules-center": ["network", "cpu", "memory", "clock", "temperature", "battery", "pulseaudio"],
+    "modules-center": ["hyprland/window"],
     "modules-right": ["keyboard-state", "hyprland/language", "tray"],
     // Modules configuration
     "hyprland/workspaces": {
         "disable-scroll": true,
         "all-outputs": true,
         "warp-on-scroll": false,
-        "format": "{icon}",
+        "format": "{id} {icon}",
         "format-icons": {
             "1": "",
             "2": "",
             "3": "",
             "4": "",
             "urgent": "",
-            "active": "",
+            // "active": "",
             "default": ""
         },
     	"on-scroll-up": "hyprctl dispatch workspace e+1",
@@ -49,17 +50,30 @@
             "unlocked": ""
         }
     },
-    "idle_inhibitor": {
-        "format": "{icon}",
-        "format-icons": {
-            "activated": "",
-            "deactivated": ""
-        }
-    },
     "tray": {
         // "icon-size": 21,
         "spacing": 6
     },
+    "custom/media": {
+        "format": "{icon} {}",
+        "return-type": "json",
+        "max-length": 40,
+        "format-icons": {
+            "spotify": "",
+            "default": "🎜"
+        },
+        "escape": true,
+        "exec": "$HOME/.config/waybar/mediaplayer.py 2> /dev/null" // Script in resources folder
+        // "exec": "$HOME/.config/waybar/mediaplayer.py --player spotify 2> /dev/null" // Filter player based on name
+    }
+},
+{
+    "name": "top",
+    "layer": "top",
+    "position": "top",
+    "modules-center": ["network", "cpu", "memory", "clock", "temperature", "battery", "pulseaudio"],
+    "spacing": 2, // Gaps between modules (4px)
+    "height": 30, // Waybar height (to be removed for auto height)
     "clock": {
         // "timezone": "America/New_York",
         "tooltip-format": "<big>{:%d %B %Y}</big>\n<tt><small>{calendar}</small></tt>",
@@ -91,6 +105,7 @@
             "warning": 30,
             "critical": 15
         },
+	"interval": 2,
         "format": "{capacity}% {icon}",
         "format-charging": "{capacity}% ",
         "format-plugged": "{capacity}% ",
@@ -129,17 +144,5 @@
         "on-click": "pkill pavucontrol || pavucontrol",
 	"on-click-middle": "pactl set-sink-mute 0 toggle"
     },
-    "custom/media": {
-        "format": "{icon} {}",
-        "return-type": "json",
-        "max-length": 40,
-        "format-icons": {
-            "spotify": "",
-            "default": "🎜"
-        },
-        "escape": true,
-        "exec": "$HOME/.config/waybar/mediaplayer.py 2> /dev/null" // Script in resources folder
-        // "exec": "$HOME/.config/waybar/mediaplayer.py --player spotify 2> /dev/null" // Filter player based on name
-    }
-}
+}]
 
