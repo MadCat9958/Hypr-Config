@@ -6,10 +6,17 @@
 
 window#waybar {
     background-color: rgba(43, 48, 59, 0.5);
-    border-bottom: 3px solid rgba(100, 114, 125, 0.5);
     color: #ffffff;
     transition-property: background-color;
     transition-duration: .5s;
+}
+
+window#waybar.top {
+    border-bottom: 3px solid rgba(100, 114, 125, 0.5);
+}
+
+window#waybar.bottom {
+    border-top: 3px solid rgba(100, 114, 125, 0.5);
 }
 
 window#waybar.hidden {
@@ -91,7 +98,7 @@ button:hover {
 #keyboard-state > label,
 #keyboard-state > label.locked,
 #language,
-#mpd {
+#mpris {
     padding: 0 10px;
     color: #ffffff;
     border-radius: 10px;
@@ -253,20 +260,16 @@ label:focus {
     color: #2d3436;
 }
 
-#mpd {
+#mpris {
     background-color: #66cc99;
-    color: #2a5c45;
+    color: #000000;
 }
 
-#mpd.disconnected {
-    background-color: #f53c3c;
-}
-
-#mpd.stopped {
+#mpris.stopped {
     background-color: #90b1b1;
 }
 
-#mpd.paused {
+#mpris.paused {
     background-color: #51a37a;
 }
 

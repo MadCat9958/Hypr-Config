@@ -1,5 +1,5 @@
 [{
-    "name": "botto,",
+    "name": "bottom",
     "layer": "top", // Waybar at top layer
     "position": "bottom", // Waybar position (top|bottom|left|right)
     "height": 30, // Waybar height (to be removed for auto height)
@@ -75,6 +75,7 @@
     "layer": "top",
     "position": "top",
     "modules-center": ["network", "cpu", "memory", "clock", "temperature", "battery", "pulseaudio"],
+    "modules-right": ["mpris"],
     "spacing": 2, // Gaps between modules (4px)
     "height": 30, // Waybar height (to be removed for auto height)
     "clock": {
@@ -147,5 +148,27 @@
         "on-click": "pkill pavucontrol || pavucontrol",
 	"on-click-middle": "pactl set-sink-mute 0 toggle"
     },
+    "mpris": {
+	"format": "{status_icon} {dynamic}",
+	"format-paused": "{status_icon} <i>{dynamic}</i>",
+	"format-stopped": "{status_icon} No music",
+	"player-icons": {
+	    "default": "▶",
+	    "mpv": "🎵"
+	},
+	"status-icons": {
+	    "playing": "▶",
+	    "paused": "⏸",
+	    "stopped": ""
+	},
+	"dynamic-order": [
+	    "artist",
+	    "title",
+	    "position",
+	    "length"
+	],
+	"interval": 1,
+	// "ignored-players": ["firefox"]
+    }
 }]
 
