@@ -74,7 +74,7 @@
     "name": "top",
     "layer": "top",
     "position": "top",
-    "modules-right": ["cpu", "memory", "temperature", "battery", "pulseaudio", "network"],
+    "modules-right": ["cpu", "memory", "temperature", "battery", "pulseaudio", "network", "bluetooth"],
     "modules-center": ["clock"],
     "modules-left": ["mpris"],
     "spacing": 2, // Gaps between modules (4px)
@@ -170,6 +170,16 @@
 	],
 	"interval": 1,
 	// "ignored-players": ["firefox"]
+    },
+    "bluetooth": {
+	"format": "{status} ",
+	"format-disabled": "",
+	"format-connected": "{device_alias} ",
+	"format-connected-battery": "{device_alias} {device_battery_percentage}% ",
+	"tooltip-format-connected": "{controller_alias}\t{controller_address}\n\n{device_enumerate}",
+	"tooltip-format-enumerate-connected": "{device_alias}\t{device_address}",
+	"on-click": "rfkill toggle bluetooth",
+	"on-click-right": "blueman-manager"
     }
 }]
 

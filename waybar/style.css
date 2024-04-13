@@ -100,7 +100,8 @@ button:hover {
 #language,
 #window,
 #workspaces,
-#mpris {
+#mpris,
+#bluetooth {
     padding: 0 10px;
     color: #ffffff;
     border-radius: 10px;
@@ -185,11 +186,13 @@ label:focus {
     background-color: #90b1b1;
 }
 
-#network {
+#network,
+#bluetooth {
     background-color: #2980b9;
 }
 
-#network.disconnected {
+#network.disconnected,
+#bluetooth.disabled {
     background-color: #f53c3c;
 }
 
