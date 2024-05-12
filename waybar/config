@@ -18,7 +18,7 @@
         "format-icons": {
             "1": "",
             "2": "",
-            "3": "",
+            "3": "",
             "4": "",
             "urgent": "",
             // "active": "",
@@ -36,10 +36,10 @@
     	"separate-outputs": true,
     },
     "hyprland/language": {
-	"format": "{}",
-	"format-en": "us",
-	"format-ru": "ru",
-	"format-by": "by",
+	"format": "{}  ",
+	"format-en": "US",
+	"format-ru": "RU",
+	"format-by": "BY",
 	"keyboard-name": "at-translated-set-2-keyboard",
 	"on-click": "hyprctl switchxkblayout at-translated-set-2-keyboard next",
 	"on-click-right": "hyprctl switchxkblayout at-translated-set-2-keyboard prev"
