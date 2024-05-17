@@ -173,7 +173,9 @@
 	// "ignored-players": ["firefox"]
     },
     "bluetooth": {
-	"format": "{status} ",
+	"format": "",
+	"format-off": "",
+	"format-on": "",
 	"format-disabled": "",
 	"format-connected": "{device_alias} ",
 	"format-connected-battery": "{device_alias} {device_battery_percentage}% ",
