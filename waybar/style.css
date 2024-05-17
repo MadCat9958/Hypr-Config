@@ -265,9 +265,6 @@ label:focus {
 
 #language {
     background-color: rgba(17, 17, 17, 0.7);
-    padding: 0 0px;
-    margin: 0 0px;
-    min-width: 30px;
 }
 
 #keyboard-state {
