@@ -47,6 +47,7 @@
     "keyboard-state": {
         "numlock": true,
         "capslock": false,
+	"device-path": "/dev/input/by-path/platform-i8042-serio-0-event-kbd",
         "format": "{name} {icon} ",
         "format-icons": {
             "locked": "",
