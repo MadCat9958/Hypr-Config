@@ -20,6 +20,7 @@
             "2": "",
             "3": "",
             "4": "",
+	    "5": "",
             "urgent": "",
             // "active": "",
             "default": ""
@@ -115,7 +116,7 @@
         "format": "{capacity}% {icon} ",
         "format-charging": "{capacity}%  ",
         "format-plugged": "{capacity}%  ",
-        "format-alt": "{time} {icon}",
+        "format-alt": "{time} {icon} ",
         // "format-good": "", // An empty format will hide the module
         // "format-full": "",
         "format-icons": ["", "", "", "", ""]
@@ -128,7 +129,8 @@
 	"tooltip-format-wifi": "{ifname} via {ipaddr} ({essid})  ",
         "format-linked": "No IP  ",
         "format-disconnected": "⚠",
-        "format-alt": "{ifname}: {ipaddr}/{cidr}"
+        "format-alt": "{ifname}: {ipaddr}/{cidr}",
+	"on-click-right": "konsole -e nmtui"
     },
     "pulseaudio": {
         // "scroll-step": 5.0, // %, can be a float
