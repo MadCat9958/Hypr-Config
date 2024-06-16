@@ -105,8 +105,14 @@ button:hover {
 #language,
 #window,
 #workspaces,
-#mpris,
-#bluetooth {
+#mpris, 
+#bluetooth.connected,
+#bluetooth.on, 
+#bluetooth.discoverable,
+#bluetooth.discovering
+#bluetooth.pairable,
+#bluetooth.off,
+#bluetooth.disabled {
     padding: 0 10px;
     color: #dddddd;
     background-color: rgba(17, 17, 17, 0.7);
@@ -193,13 +199,22 @@ label:focus {
 }
 
 #network,
-#bluetooth {
+#bluetooth.connected,
+#bluetooth.on, 
+#bluetooth.discoverable,
+#bluetooth.discovering
+#bluetooth.pairable {
     background-color: rgba(17, 17, 17, 0.7);
 }
 
 #network.disconnected,
+#bluetooth.off,
 #bluetooth.disabled {
     background-color: rgba(102, 17, 17, 0.7);
+}
+
+#bluetooth {
+    border: none;
 }
 
 #pulseaudio {
